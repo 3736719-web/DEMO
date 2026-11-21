@@ -1,0 +1,20 @@
+#:kivy 1.11.1
+
+<CalendarApp>:
+  BoxLayout:
+    orientation: 'vertical'
+    
+    Label:
+      text: root.current_time_text
+      
+    Button:
+      text: 'Следующий месяц'
+      size_hint_y: None
+      height: dp(50)
+      on_press: root.next_month()
+  
+    Button:
+      text: 'Предыдущий месяц'
+      size_hint_y: None
+      height: dp(50)
+      on_press: root.prev_month()
